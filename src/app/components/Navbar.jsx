@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <>
       <header className="w-full bg-white py-3 shadow-md">
-        <nav className="flex container gap-3 px-3 sm:px-0 items-center mx-auto">
+        <nav className="flex container gap-3 px-3 sm:px-0 lg:px-20 items-center mx-auto">
           <div className="bg-primary py-3 px-6 rounded-xl max-w-fit">
             <FaPlay className="text-2xl md:text-4xl text-white" />
           </div>
