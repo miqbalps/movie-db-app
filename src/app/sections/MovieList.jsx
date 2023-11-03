@@ -1,6 +1,5 @@
 "use client";
 import { useGetMovies, useGetGenres } from "@/hooks/useMovies";
-import { useSearchParams } from "next/navigation";
 import React, { useState } from "react";
 import Card from "@/app/components/Card";
 import { ButtonCategory } from "@/app/components/Button";
