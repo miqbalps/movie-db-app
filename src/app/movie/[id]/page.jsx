@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useGetDetailMovie } from "@/hooks/useMovies";
 import {
   BsBookmarkPlus,
+  BsBookmarkPlusFill,
   BsCartFill,
   BsEyeFill,
   BsStarFill,
@@ -62,7 +63,7 @@ export default function Page() {
                       Add to Watchlist
                     </div>
                     <div className="bg-transparent border-2 visible sm:hidden py-3 px-6 rounded-md max-w-fit text-lg md:text-xl hover:bg-primary transition-colors hover:border-none">
-                      <BsBookmarkPlus></BsBookmarkPlus>
+                      <BsBookmarkPlusFill></BsBookmarkPlusFill>
                     </div>
                   </Link>
                 </div>
