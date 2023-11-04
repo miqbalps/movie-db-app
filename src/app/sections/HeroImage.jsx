@@ -10,8 +10,6 @@ const HeroImage = ({ discover = [], hero }) => {
     setCurrentIndex((currentIndex - 1 + discover.length) % discover.length);
   const nextSlide = () => setCurrentIndex((currentIndex + 1) % discover.length);
 
-  console.log(discover);
-  console.log(currentIndex);
   return (
     <div className={"h-[300px] md:h-[424px] w-full m-auto"}>
       <div className="bg-gradient-to-b carousel h-full w-full">
