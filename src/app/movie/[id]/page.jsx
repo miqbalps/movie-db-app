@@ -26,7 +26,7 @@ export default function Page() {
           >
             <div className="overlay top-0 left-0 w-full h-full flex bg-opacity-30 bg-black">
               <div className="overlay-content text-white justify-center container p-8 mx-auto sm:px-0 lg:px-12 lg:py-8 flex flex-col gap-4 md:gap-6">
-                <div className="overview md:w-3/4">
+                <div className="overview md:w-3/4 lg:px-8">
                   <h1 className="text-3xl md:text-4xl font-bold truncate w-full">
                     {data.original_title}
                   </h1>
@@ -42,7 +42,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 items-center lg:px-8">
                   <Link href="#">
                     <div className="bg-primary hidden sm:block py-3 px-6 rounded-md max-w-fit text-lg md:text-xl hover:bg-transparent hover:border-2 transition-colors">
                       Watch Trailer
@@ -66,7 +66,7 @@ export default function Page() {
         </div>
       </div>
       <div className="container mt-5 mx-auto p-8 sm:p-0 md:py-8 lg:px-12">
-        <div className="mb-8">
+        <div className="mb-8 lg:px-8">
           <div className="flex gap-4 mb-8 overflow-auto">
             <Link href="#">
               <div className="bg-primary py-1 px-4 rounded-full text-white max-w-fit text-lg md:text-xl transition-colors">
@@ -91,7 +91,7 @@ export default function Page() {
           </div>
           <p className="text-lg mb-3 font">{data.overview}</p>
         </div>
-        <div>
+        <div className="lg:px-8">
           <div className="flex items-center mb-3 gap-4">
             <h1 className="text-2xl md:text-3xl font-bold">Movie Info</h1>
             <div className="flex-grow h-0.5 bg-gray-300"></div>
