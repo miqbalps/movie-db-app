@@ -69,12 +69,16 @@ const MovieList = () => {
       <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 justify-center sm:justify-around gap-3">
         {!data || loading
           ? Array.from({ length: 20 }).map((_, index) => (
-              <CardSkeleton key={index} />
+              <React.Fragment key={index}>
+                <CardSkeleton />
+              </React.Fragment>
             ))
           : data?.results?.map((movie) => (
-              <Link key={movie.id} href={`/movie/${movie.id}`}>
-                <Card movie={movie} genres={genres} />
-              </Link>
+              <React.Fragment key={movie.id}>
+                <Link href={`/movie/${movie.id}`}>
+                  <Card movie={movie} genres={genres} />
+                </Link>
+              </React.Fragment>
             ))}
       </div>
 
