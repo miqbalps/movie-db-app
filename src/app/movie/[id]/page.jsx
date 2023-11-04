@@ -25,7 +25,7 @@ export default function Page() {
             className="ease-in-out duration-700 delay-100 carousel-item justify-end h-full flex flex-col w-full bg-center bg-cover bg-no-repeat"
           >
             <div className="overlay top-0 left-0 w-full h-full flex bg-opacity-30 bg-black">
-              <div className="overlay-content text-white md:px-12 justify-center container p-8 mx-auto sm:px-0 lg:px-12 lg:py-8 flex flex-col gap-4 md:gap-6">
+              <div className="overlay-content text-white justify-center container p-8 mx-auto sm:px-0 lg:px-12 lg:py-8 flex flex-col gap-4 md:gap-6">
                 <div className="overview md:w-3/4">
                   <h1 className="text-3xl md:text-4xl font-bold truncate w-full">
                     {data.original_title}
@@ -65,7 +65,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="container mt-5 mx-auto p-8 sm:p-0 md:py-8 md:px-12">
+      <div className="container mt-5 mx-auto p-8 sm:p-0 md:py-8 lg:px-12">
         <div className="mb-8">
           <div className="flex gap-4 mb-8 overflow-auto">
             <Link href="#">
