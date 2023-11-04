@@ -16,7 +16,10 @@ const HeroImage = ({ discover = [], hero }) => {
         <div
           id={`item${currentIndex + 1}`}
           style={{
-            backgroundImage: `url(${imageUrl}${discover[currentIndex]?.backdrop_path})`,
+            backgroundImage:
+              discover[currentIndex] && discover[currentIndex].backdrop_path
+                ? `url(${imageUrl + discover[currentIndex].backdrop_path})`
+                : "url(https://placehold.co/3500x1969)",
           }}
           className="ease-in-out duration-700 delay-100 carousel-item justify-end h-full flex flex-col w-full bg-center bg-cover bg-no-repeat"
         >

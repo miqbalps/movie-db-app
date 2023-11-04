@@ -28,13 +28,24 @@ export function formatReadableNumber(number) {
     return "Invalid number";
   }
 
+  const numberInThousands = number / 1000;
+  const numberInTenThousands = number / 10000;
+  const numberInHundredThousands = number / 100000;
   const numberInMillions = number / 1000000;
   const numberInBillions = number / 1000000000;
 
-  if (number >= 1000000 && number < 1000000000) {
-    return `${numberInMillions.toFixed(0)} million USD`;
-  } else if (number >= 1000000000) {
+  if (number >= 1000000000) {
     return `${numberInBillions.toFixed(0)} billion USD`;
+  } else if (number >= 1000000) {
+    return `${numberInMillions.toFixed(0)} million USD`;
+  } else if (number >= 100000) {
+    return `${numberInHundredThousands.toFixed(0)} hundred thousand USD`;
+  } else if (number >= 10000) {
+    return `${numberInTenThousands.toFixed(0)} ten thousand USD`;
+  } else if (number >= 1000) {
+    return `${numberInThousands.toFixed(0)} thousand USD`;
+  } else if (number == 0) {
+    return `-`;
   } else {
     return `${number.toLocaleString()} USD`;
   }
