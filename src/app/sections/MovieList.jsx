@@ -1,7 +1,8 @@
 import { useGetMovies, useGetGenres } from "@/hooks/useMovies";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@/app/components/Card";
 import { ButtonCategory } from "@/app/components/Button";
+import CardSkeleton from "../components/Skeleton";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
@@ -10,6 +11,7 @@ const MovieList = () => {
   const [page, setPage] = useState(1);
   const data = useGetMovies(withGenres, page);
   const genres = useGetGenres();
+  const [loading, setLoading] = useState(true);
 
   const genreButtons = [
     { id: "", name: "All" },
@@ -19,6 +21,12 @@ const MovieList = () => {
     { id: "878", name: "science fiction" },
     { id: "35", name: "comedy" },
   ];
+
+  useEffect(() => {
+    if (data) {
+      setLoading(false);
+    }
+  }, [data]);
 
   const totalPages = 6 || 1;
 
@@ -59,13 +67,15 @@ const MovieList = () => {
       </div>
 
       <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 justify-center sm:justify-around gap-3">
-        {data?.results?.map((movie) => (
-          <React.Fragment key={movie.id}>
-            <Link key={movie.id} href={`/movie/${movie.id}`}>
-              <Card movie={movie} genres={genres} />
-            </Link>
-          </React.Fragment>
-        ))}
+        {!data || loading
+          ? Array.from({ length: 20 }).map((_, index) => (
+              <CardSkeleton key={index} />
+            ))
+          : data?.results?.map((movie) => (
+              <Link key={movie.id} href={`/movie/${movie.id}`}>
+                <Card movie={movie} genres={genres} />
+              </Link>
+            ))}
       </div>
 
       <div className="flex justify-center mt-10">
