@@ -72,7 +72,11 @@ const MovieList = () => {
         <ul className="flex items-center text-2xl gap-6 sm:gap-12">
           <li>
             <button onClick={handlePrevPage} disabled={page === 1}>
-              <BsArrowLeft className="text-3xl hover:text-primary" />
+              <BsArrowLeft
+                className={`text-3xl hover:text-primary ${
+                  page === 1 ? "hover:text-black" : ""
+                }`}
+              />
             </button>
           </li>
           {[...Array(totalPages)].map((_, index) => (
