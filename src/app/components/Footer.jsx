@@ -27,7 +27,7 @@ export default function Footer() {
                 <li key={page}>
                   <Link
                     className="hover:text-primary transition-colors"
-                    href={`/${page}`}
+                    href="/"
                   >
                     {page}
                   </Link>
