@@ -8,11 +8,11 @@ export default function Footer() {
     <footer className="w-full py-3 mt-5 shadow-md bg-black md:px-16">
       <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between container gap-6 p-6 md:p-0 my-4 sm:px-0 text-white mx-auto">
         <div className="basis-3/5 md:pe-16">
-          <Link href="/">
-            <div className="bg-primary py-3 px-6 rounded-xl max-w-fit mb-4">
+          <div className="bg-primary py-3 px-6 rounded-xl max-w-fit mb-4">
+            <Link href="/">
               <FaPlay className="text-2xl md:text-4xl text-white" />
-            </div>
-          </Link>
+            </Link>
+          </div>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard.printing and
