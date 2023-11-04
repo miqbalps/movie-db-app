@@ -13,11 +13,7 @@ const HeroImage = ({ discover = [], hero }) => {
   console.log(discover);
   console.log(currentIndex);
   return (
-    <div
-      className={`h-[300px] md:h-[424px] w-full m-auto group ${
-        hero ? "hidden" : ""
-      }`}
-    >
+    <div className={"h-[300px] md:h-[424px] w-full m-auto"}>
       <div className="bg-gradient-to-b carousel h-full w-full">
         <div
           id={`item${currentIndex + 1}`}

@@ -1,4 +1,3 @@
-"use client";
 import { useGetMovies, useGetGenres } from "@/hooks/useMovies";
 import React, { useState } from "react";
 import Card from "@/app/components/Card";
@@ -47,12 +46,13 @@ const MovieList = () => {
         Browse by category
       </h3>
 
-      <div className="flex py-2 mb-4 overflow-auto items-center text-lg lg:text-2xl text-zinc-400 font-semibold gap-6 sm:gap-6 lg:mb-8">
+      <div className="flex py-2 mb-4 overflow-auto items-center text-lg lg:text-2xl text-zinc-400 font-semibold gap-6 sm:gap-6 lg:mb-8 whitespace-nowrap">
         {genreButtons.map((button) => (
           <React.Fragment key={button.id}>
             <ButtonCategory
               onClick={() => setWithGenres(button.id)}
               name={button.name}
+              active={withGenres === button.id}
             />
           </React.Fragment>
         ))}
@@ -71,22 +71,33 @@ const MovieList = () => {
       <div className="flex justify-center mt-10">
         <ul className="flex items-center text-2xl gap-6 sm:gap-12">
           <li>
-            <button onClick={handlePrevPage}>
-              <BsArrowLeft className="text-3xl" />
+            <button onClick={handlePrevPage} disabled={page === 1}>
+              <BsArrowLeft className="text-3xl hover:text-primary" />
             </button>
           </li>
-          {[...Array(6)].map((_, index) => (
+          {[...Array(totalPages)].map((_, index) => (
             <React.Fragment key={index + 1}>
               <li>
-                <button onClick={() => handlePageChange(index + 1)}>
+                <button
+                  onClick={() => handlePageChange(index + 1)}
+                  className={`${
+                    page === index + 1
+                      ? "bg-primary text-white py-1 px-3"
+                      : "hover:text-primary"
+                  }`}
+                >
                   {index + 1}
                 </button>
               </li>
             </React.Fragment>
           ))}
           <li>
-            <button onClick={handleNextPage}>
-              <BsArrowRight className="text-3xl" />
+            <button onClick={handleNextPage} disabled={page === totalPages}>
+              <BsArrowRight
+                className={`text-3xl hover:text-primary ${
+                  page === totalPages ? "hover:text-black" : ""
+                }`}
+              />
             </button>
           </li>
         </ul>

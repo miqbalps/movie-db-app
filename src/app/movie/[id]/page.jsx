@@ -8,13 +8,7 @@ import {
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useGetDetailMovie } from "@/hooks/useMovies";
-import {
-  BsBookmarkPlus,
-  BsBookmarkPlusFill,
-  BsCartFill,
-  BsEyeFill,
-  BsStarFill,
-} from "react-icons/bs";
+import { BsBookmarkPlusFill, BsEyeFill, BsStarFill } from "react-icons/bs";
 
 export default function Page() {
   const params = useParams();
@@ -31,9 +25,8 @@ export default function Page() {
             className="ease-in-out duration-700 delay-100 carousel-item justify-end h-full flex flex-col w-full bg-center bg-cover bg-no-repeat"
           >
             <div className="overlay top-0 left-0 w-full h-full flex bg-opacity-30 bg-black">
-              {/* Add content for the overlay here */}
-              <div className="overlay-content text-white items-center sm:items-start justify-center container p-8 mt-5 mx-auto md:p-0 lg:px-12 lg:py-8 flex flex-col gap-8">
-                <div className="overview w-3/4">
+              <div className="overlay-content text-white justify-center container p-8 mt-5 mx-auto md:p-0 lg:px-12 lg:py-8 flex flex-col gap-4 md:gap-6">
+                <div className="overview md:w-3/4">
                   <h1 className="text-3xl md:text-4xl font-bold truncate w-full">
                     {data.original_title}
                   </h1>
@@ -44,7 +37,7 @@ export default function Page() {
                       </div>
                       {data.vote_average}
                     </h2>
-                    <p className="truncate md:overflow-visible md:text-clip md:whitespace-normal">
+                    <p className="line-clamp-3 md:line-clamp-6 md:overflow-visible md:text-clip md:whitespace-normal">
                       {data.overview}
                     </p>
                   </div>
