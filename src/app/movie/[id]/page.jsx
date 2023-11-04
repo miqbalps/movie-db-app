@@ -8,7 +8,12 @@ import {
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useGetDetailMovie } from "@/hooks/useMovies";
-import { BsCartFill, BsEyeFill, BsStarFill } from "react-icons/bs";
+import {
+  BsBookmarkPlus,
+  BsCartFill,
+  BsEyeFill,
+  BsStarFill,
+} from "react-icons/bs";
 
 export default function Page() {
   const params = useParams();
@@ -57,7 +62,7 @@ export default function Page() {
                       Add to Watchlist
                     </div>
                     <div className="bg-transparent border-2 visible sm:hidden py-3 px-6 rounded-md max-w-fit text-lg md:text-xl hover:bg-primary transition-colors hover:border-none">
-                      <BsCartFill></BsCartFill>
+                      <BsBookmarkPlus></BsBookmarkPlus>
                     </div>
                   </Link>
                 </div>
