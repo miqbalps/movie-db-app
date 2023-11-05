@@ -13,7 +13,7 @@ export default function Footer() {
               <FaPlay className="text-2xl md:text-4xl text-white" />
             </Link>
           </div>
-          <p>
+          <p className="xl:text-lg">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard.printing and
             typesetting industry. Lorem Ipsum has been the industrys standard

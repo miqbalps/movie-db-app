@@ -22,25 +22,6 @@ const useGetMovies = (withGenres, page = 1) => {
   return dataMovies;
 };
 
-const useGetDetailMovie = (id) => {
-  const [dataMovie, setDataMovie] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(`/movie/${id}`);
-        setDataMovie(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    fetchData();
-  }, [id]);
-
-  return dataMovie;
-};
-
 const useGetGenres = (id) => {
   const [dataGenres, setDataGenres] = useState([]);
 
@@ -64,4 +45,67 @@ const useGetGenres = (id) => {
   return dataGenres;
 };
 
-export { useGetMovies, useGetDetailMovie, useGetGenres };
+const useGetDetailMovie = (id) => {
+  const [dataMovie, setDataMovie] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/movie/${id}`);
+        setDataMovie(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+  return dataMovie;
+};
+
+const useGetCredits = (id) => {
+  const [dataCredits, setDataCredits] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/movie/${id}/credits`);
+        setDataCredits(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+  return dataCredits;
+};
+
+const useGetReviews = (id) => {
+  const [dataReviews, setDataReviews] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/movie/${id}/reviews`);
+        setDataReviews(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+  return dataReviews;
+};
+
+export {
+  useGetMovies,
+  useGetDetailMovie,
+  useGetGenres,
+  useGetCredits,
+  useGetReviews,
+};

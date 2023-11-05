@@ -61,7 +61,7 @@ export function formatLanguage(languageCode) {
     ja: "Japanese",
     // Add more language codes and names as needed
   };
-  const languageName = languageNames[languageCode] || "Language Not Found";
+  const languageName = languageNames[languageCode] || "-";
 
   return languageName;
 }
