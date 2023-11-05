@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { useGetDetailMovie, useGetReviews } from "@/hooks/useMovies";
 import { useGetCredits } from "@/hooks/useMovies";
 import { BsBookmarkPlusFill, BsEyeFill, BsStarFill } from "react-icons/bs";
+import Navbar from "@/app/components/Navbar";
 import Overview from "@/app/movie/sections/Overview";
 import CastList from "@/app/movie/sections/CastList";
 import Review from "@/app/movie/sections/Review";
@@ -26,6 +27,7 @@ export default function Page() {
 
   return (
     <>
+      <Navbar />
       <div className="h-[300px] md:h-[424px] w-full m-auto">
         <div className="bg-gradient-to-b carousel h-full w-full">
           <div

@@ -9,7 +9,7 @@ export function MovieCard({ movie, genres }) {
         className="rounded-md"
         src={
           movie.poster_path === null
-            ? "https://placehold.co/500x500/png"
+            ? "https://placehold.co/640x960/png"
             : imageUrl + movie.poster_path
         }
         alt={movie.title}

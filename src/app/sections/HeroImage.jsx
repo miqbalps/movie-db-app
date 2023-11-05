@@ -3,7 +3,7 @@ import { imageUrl } from "@/lib/api";
 import React, { useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
-const HeroImage = ({ discover = [], hero }) => {
+const HeroImage = ({ discover = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () =>
@@ -11,7 +11,7 @@ const HeroImage = ({ discover = [], hero }) => {
   const nextSlide = () => setCurrentIndex((currentIndex + 1) % discover.length);
 
   return (
-    <div className={"h-[300px] md:h-[424px] w-full m-auto"}>
+    <div className="h-[300px] md:h-[424px] w-full m-auto">
       <div className="bg-gradient-to-b carousel h-full w-full">
         <div
           id={`item${currentIndex + 1}`}

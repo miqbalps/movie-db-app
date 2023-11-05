@@ -1,6 +1,25 @@
 import { useState, useEffect } from "react";
 import axios from "@/lib/api";
 
+const useSearchMovies = (query) => {
+  const [searchMovie, setSearchMovie] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/search/movie?query=${query}`);
+        setSearchMovie(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, [query]);
+
+  return searchMovie;
+};
+
 const useGetMovies = (withGenres, page = 1) => {
   const [dataMovies, setDataMovies] = useState([]);
 
@@ -103,6 +122,7 @@ const useGetReviews = (id) => {
 };
 
 export {
+  useSearchMovies,
   useGetMovies,
   useGetDetailMovie,
   useGetGenres,

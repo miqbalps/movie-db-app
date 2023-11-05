@@ -2,7 +2,7 @@ import { FaPlay } from "react-icons/fa";
 import Link from "next/link";
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar({ search }) {
   return (
     <>
       <header className="w-full bg-white py-3 shadow-md sticky top-0">
@@ -17,6 +17,8 @@ export default function Navbar() {
               type="text"
               className="w-full focus:outline-none placeholder:text-xl placeholder:md:text-2xl placeholder:font-medium placeholder:text-zinc-400"
               placeholder="search movie"
+              onChange={search}
+              onClick={search}
             ></input>
           </div>
         </nav>
