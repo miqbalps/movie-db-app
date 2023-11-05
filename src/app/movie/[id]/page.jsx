@@ -23,7 +23,6 @@ export default function Page() {
       setIsLoading(false);
     }
   }, [credits]);
-  console.log(menu);
 
   return (
     <>
