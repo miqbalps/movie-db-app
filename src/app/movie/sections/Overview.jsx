@@ -15,14 +15,14 @@ const Overview = (overview) => {
           <h1 className="text-2xl md:text-3xl font-bold">Synopsis</h1>
           <div className="flex-grow h-0.5 bg-gray-300"></div>
         </div>
-        <p className="text-lg xl:text-xl mb-3 font">{data.overview}</p>
+        <p className="text-lg xl:text-xl mb-3">{data.overview}</p>
       </div>
       <div className="movie-info">
         <div className="flex items-center mb-3 gap-4">
           <h1 className="text-2xl md:text-3xl font-bold">Movie Info</h1>
           <div className="flex-grow h-0.5 bg-gray-300"></div>
         </div>
-        <div className="text-lg md:text-xl mb-3">
+        <div className="text-lg xl:text-xl mb-3">
           <h1>
             <span className="font-semibold">Status: </span>
             {data.status}

@@ -6,7 +6,7 @@ import { FaPlay } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="w-full py-3 mt-5 shadow-md bg-black md:px-12">
-      <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between container gap-6 p-6 md:p-0 my-4 sm:px-0 text-white mx-auto">
+      <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between container gap-6 p-6 md:p-0 xl:px-12 2xl:px-0 my-4 sm:px-0 text-white mx-auto">
         <div className="basis-3/5 lg:ps-8 md:pe-16">
           <div className="bg-primary py-3 px-6 rounded-xl max-w-fit mb-4">
             <Link href="/">
