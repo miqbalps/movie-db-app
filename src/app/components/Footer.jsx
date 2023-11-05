@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="w-full py-3 mt-5 shadow-md bg-black md:px-12">
       <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between container gap-6 p-6 md:p-0 my-4 sm:px-0 text-white mx-auto">
-        <div className="basis-3/5 lg:ps-8 md:pe-24">
+        <div className="basis-3/5 lg:ps-8 md:pe-16">
           <div className="bg-primary py-3 px-6 rounded-xl max-w-fit mb-4">
             <Link href="/">
               <FaPlay className="text-2xl md:text-4xl text-white" />
@@ -44,16 +44,16 @@ export default function Footer() {
               <Image
                 src="/google-play-badge.svg"
                 alt="ps-badge"
-                width={150}
-                height={150}
+                width={130}
+                height={130}
               />
             </Link>
             <Link href="https://www.apple.com/id/app-store/">
               <Image
                 src="/app-store-badge.svg"
                 alt="as-badge"
-                width={150}
-                height={150}
+                width={130}
+                height={130}
               />
             </Link>
           </div>
@@ -63,19 +63,19 @@ export default function Footer() {
               <Image
                 src="/facebook.svg"
                 alt="facebook"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               />
             </Link>
             <Link href="https://twitter.com/">
-              <Image src="/path.svg" alt="path" width={50} height={50} />
+              <Image src="/path.svg" alt="path" width={40} height={40} />
             </Link>
             <Link href="https://www.instagram.com/">
               <Image
                 src="/instagram.svg"
                 alt="instagram"
-                width={55}
-                height={55}
+                width={45}
+                height={45}
               />
             </Link>
           </div>

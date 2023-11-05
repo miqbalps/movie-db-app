@@ -83,7 +83,7 @@ const MovieList = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <ul className="flex items-center text-2xl gap-6 sm:gap-12">
+        <ul className="flex items-center text-xl sm:text-2xl gap-6 sm:gap-12">
           <li>
             <button onClick={handlePrevPage} disabled={page === 1}>
               <BsArrowLeft
