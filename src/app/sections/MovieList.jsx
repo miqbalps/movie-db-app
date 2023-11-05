@@ -49,7 +49,7 @@ const MovieList = () => {
   };
 
   return (
-    <div className="px-3 md:px-20">
+    <div className="px-3 md:px-14 lg:px-20 xl:px-40 2xl:px-20">
       <h3 className="text-2xl lg:text-4xl font-black text-zinc-500 py-2 mt-4 lg:my-6">
         Browse by category
       </h3>
