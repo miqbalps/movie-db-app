@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
       </div>
       <div>
-        <p className="text-white text-lg text-center border-t-2 pt-4 mt-8">
+        <p className="text-white text-lg text-center border-t-2 py-6 pb-4 mt-8">
           &copy; {today.getFullYear()} Movie DB App &#40;{" "}
           <Link
             href={"https://github.com/miqbalps/movie-db-app"}
