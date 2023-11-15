@@ -4,6 +4,7 @@ import React from "react";
 import { FaPlay } from "react-icons/fa";
 
 export default function Footer() {
+  const today = new Date();
   return (
     <footer className="w-full py-3 mt-5 shadow-md bg-black md:px-12">
       <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-between container gap-6 p-6 md:p-0 xl:px-12 2xl:px-0 my-4 sm:px-0 text-white mx-auto">
@@ -80,6 +81,18 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+      </div>
+      <div>
+        <p className="text-white text-lg text-center border-t-2 pt-4 mt-8">
+          &copy; {today.getFullYear()} Movie DB App &#40;{" "}
+          <Link
+            href={"https://github.com/miqbalps/movie-db-app"}
+            className="hover:text-primary transition-colors"
+          >
+            @miqbalps
+          </Link>{" "}
+          &#41;. All Right Reserved.
+        </p>
       </div>
     </footer>
   );
