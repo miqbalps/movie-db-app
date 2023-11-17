@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: ["image.tmdb.org", "placehold.co"],
+    unoptimized: true,
   },
 };
 

@@ -16,6 +16,7 @@ export function MovieCard({ movie, genres }) {
         width="500"
         height="500"
         priority
+        unoptimized
       />
       <div className="px-2 pb-2 mt-2">
         <h3 className="font-semibold text-xl sm:text-base xl:text-xl hover:text-primary transition-colors truncate w-full">
@@ -44,6 +45,7 @@ export function CastCard(cast) {
         width="500"
         height="500"
         priority
+        unoptimized
       />
       <div className="px-2 pb-2 mt-2">
         <h3 className="font-semibold text-xl sm:text-base xl:text-xl hover:text-primary transition-colors truncate w-full">
@@ -73,6 +75,7 @@ export function ReviewCard(reviews) {
           width="500"
           height="500"
           priority
+          unoptimized
         />
         <div className="flex flex-col">
           <h3 className="font-semibold text-base sm:text-base hover:text-primary transition-colors truncate w-full">
